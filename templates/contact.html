@@ -150,20 +150,31 @@
         <div class="container">
             <h3>Contact Form</h3>
             <form action="/connection" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <form action="/" method="POST" onsubmit="redirectToHome(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-                <label for="email">Email your mail_ID:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <label for="email">Email your mail_ID:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="6" placeholder="Enter description" required></textarea>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="6" placeholder="Enter description" required></textarea>
 
-                <button type="submit">Submit</button>
+    <button type="submit">Submit</button>
+</form>
 
-                <div class="btn-container">
-                    <a href="/" class="btn">Go to Home</a>
-                </div>
+<div class="btn-container">
+    <a href="/" class="btn">Go to Home</a>
+</div>
+
+<script>
+    function redirectToHome(event) {
+        event.preventDefault(); // Prevent default form submission
+        setTimeout(() => {
+            window.location.href = "/"; // Redirect to home page
+        }, 1000); // Delay to simulate form submission
+    }
+</script>
 
             </form>
         </div>
