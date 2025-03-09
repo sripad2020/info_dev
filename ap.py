@@ -1,4 +1,4 @@
-from flask import Flask,request,render_template
+from flask import Flask,request,render_template,redirect,url_for
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -31,7 +31,7 @@ def conn():
         msg['From'] = sender_email
         msg['To'] = sender_email
         emil=email.split('@')[0]
-        msg['Subject'] = f"{emil}" 
+        msg['Subject'] = f"{emil}"
 
         msg.attach(MIMEText(f"The message is from {name} and email is {email} and message is "+description, 'html'))
         server = smtplib.SMTP("smtp.gmail.com", 587)
@@ -39,6 +39,7 @@ def conn():
         server.login(sender_email, password)
         server.send_message(msg)
         server.quit()
+        return redirect(url_for('connect'))
 
 if __name__=='__main__':
     app.run()
