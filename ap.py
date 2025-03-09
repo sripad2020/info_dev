@@ -4,9 +4,16 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
+from nltk import sent_tokenize, word_tokenize, FreqDist
+from nltk.corpus import stopwords
 import re
 
 app=Flask(__name__)
+
+sender_email="sripadkarthik@gmail.com"
+password='soob dlvs mvlc iyhk'
+
+
 @app.route('/',methods=['GET','POST'])
 def home():
     return render_template('index.html')
@@ -26,7 +33,7 @@ def conn():
         msg['From'] = sender_email
         msg['To'] = sender_email
         emil=email.split('@')[0]
-        msg['Subject'] = f"{emil}" +key_points[0]
+        msg['Subject'] = f"{emil}" 
 
         msg.attach(MIMEText(f"The message is from {name} and email is {email} and message is "+description, 'html'))
         server = smtplib.SMTP("smtp.gmail.com", 587)
