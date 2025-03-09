@@ -33,7 +33,7 @@ def conn():
         emil=email.split('@')[0]
         msg['Subject'] = f"{emil}"
 
-        msg.attach(MIMEText(f"The message is from {name} and email is {email} and message is "+description, 'html'))
+        msg.attach(MIMEText(f"The message is from {name} and email is {email} and message is \n\n\n\n\n"+description, 'html'))
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
         server.login(sender_email, password)
