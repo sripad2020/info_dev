@@ -4,8 +4,6 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
-from nltk import sent_tokenize, word_tokenize, FreqDist
-from nltk.corpus import stopwords
 import re
 
 app=Flask(__name__)
