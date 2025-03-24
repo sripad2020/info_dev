@@ -5,9 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sripad Rama Hebbar - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Keyframes for background animation */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        #skills ul li i {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 20px rgba(200, 90, 100, 0.2), 0 0 40px rgba(255, 195, 113, 0.6), 0 0 60px rgba(88, 177, 159, 0.6), 0 0 80px rgba(108, 91, 123, 0.6), 0 0 100px rgba(243, 156, 18, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(238, 95, 109, 0.8), 0 0 50px rgba(255, 195, 113, 0.8), 0 0 70px rgba(88, 177, 159, 0.8), 0 0 90px rgba(108, 91, 123, 0.8), 0 0 110px rgba(243, 156, 18, 0.8);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(238, 95, 109, 0.6), 0 0 40px rgba(255, 195, 113, 0.6), 0 0 60px rgba(88, 177, 159, 0.6), 0 0 80px rgba(108, 91, 123, 0.6), 0 0 100px rgba(243, 156, 18, 0.6);
+            }
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: #fff;
             margin: 0;
             padding: 0;
@@ -15,45 +47,28 @@
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
-            background: linear-gradient(to right, #EE5F6D, #FFC371, #58B19F, #6C5B7B, #F39C12);
+            background: linear-gradient(270deg, #EE5F6D, #FFC371, #58B19F, #6C5B7B, #F39C12);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite, glow 5s infinite alternate;
             overflow-x: hidden;
-            transition: background 0.5s ease-in-out;
+            position: relative;
         }
-           .project-list {
-        list-style-type: none;
-        padding-left: 0;
-    }
-    .project-list li {
-        margin-bottom: 20px;
-    }
-    .project-details {
-        list-style-type: none;
-        padding-left: 20px;
-    }
-    .project-details li {
-        position: relative;
-        padding-left: 25px;
-        margin-bottom: 10px;
-    }
-    .project-details li::before {
-        content: "✔️";
-        position: absolute;
-        left: 0;
-        color: #4CAF50; /* Green checkmark color */
-        font-size: 1.2em;
-    }
-    .project-details li {
-        font-size: 1em;
-        line-height: 1.6;
-    }
-    strong {
-        color: #2c3e50; /* Dark blue for project titles */
-        font-size: 1.1em;
-    }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
         .container {
+            position: relative;
+            z-index: 1;
             width: 100%;
             max-width: 1200px;
-            background: linear-gradient(to bottom right, #2c3e50, #34495e, #2ecc71);
+            background: linear-gradient(to bottom right, rgba(44, 62, 80, 0.9), rgba(52, 73, 94, 0.9), rgba(46, 204, 113, 0.9));
             color: #fff;
             padding: 40px;
             border-radius: 15px;
@@ -74,16 +89,18 @@
         }
 
         header h1 {
-            font-size: 2.8em;
+            font-size: 3.5em;
             margin-bottom: 10px;
             color: #FF6347;
             font-family: 'Georgia', serif;
             text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+            font-weight: 700;
         }
 
         header .tagline {
-            font-size: 1.2em;
+            font-size: 1.4em;
             color: #e1e1e1;
+            font-weight: 300;
         }
 
         section {
@@ -96,14 +113,16 @@
         }
 
         section h2 {
-            font-size: 2.3em;
+            font-size: 2.5em;
             color: #ecf0f1;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         section p, ul li {
-            font-size: 1em;
+            font-size: 1.1em;
             color: #ecf0f1;
+            font-weight: 400;
         }
 
         ul {
@@ -114,6 +133,7 @@
         a {
             color: #1abc9c;
             text-decoration: none;
+            font-weight: 500;
         }
 
         a:hover {
@@ -129,51 +149,50 @@
         }
 
         .btn-container {
-    text-align: center;
-    margin-top: 30px;
-}
+            text-align: center;
+            margin-top: 30px;
+        }
 
-.btn {
-    display: inline-block;
-    background: linear-gradient(45deg, #1abc9c, #16a085);
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-}
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
 
-.btn::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    top: 0;
-    left: -100%;
-    transition: 0.4s;
-}
+        .btn::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            top: 0;
+            left: -100%;
+            transition: 0.4s;
+        }
 
-.btn:hover::before {
-    left: 100%;
-}
+        .btn:hover::before {
+            left: 100%;
+        }
 
-.btn:hover {
-    background: linear-gradient(45deg, #16a085, #1abc9c);
-    transform: scale(1.1);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-}
+        .btn:hover {
+            background: linear-gradient(45deg, #16a085, #1abc9c);
+            transform: scale(1.1);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
 
-.btn:active {
-    transform: scale(1);
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-}
-
+        .btn:active {
+            transform: scale(1);
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+        }
 
         @media (max-width: 768px) {
             .container {
@@ -207,16 +226,578 @@
             color: #fff;
             font-size: 2em;
             margin-bottom: 20px;
+            font-weight: 600;
         }
 
         .division p {
             color: #bdc3c7;
             font-size: 1.1em;
+            font-weight: 300;
         }
+        .project-list li strong {
+    display: inline-block;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(45deg, #1abc9c, #16a085);
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.project-list li strong:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #16a085, #1abc9c);
+}
+        .popup-container {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    /* Popup Button */
+    .popup-button {
+        background: linear-gradient(45deg, #1abc9c, #16a085);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1em;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .popup-button:hover {
+        background: linear-gradient(45deg, #16a085, #1abc9c);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Popup Content (Hidden by Default) */
+    .popup-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        padding: 10px;
+    }
+
+    /* Show Popup on Hover */
+    .popup-container:hover .popup-content {
+        display: block;
+    }
+
+    /* Iframe Styling */
+    .popup-content iframe {
+        border-radius: 8px;
+    }.popup-container {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    /* Popup Button */
+    .popup-button {
+        background: linear-gradient(45deg, #1abc9c, #16a085);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1em;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .popup-button:hover {
+        background: linear-gradient(45deg, #16a085, #1abc9c);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Popup Content (Hidden by Default) */
+    .popup-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        padding: 10px;
+    }
+
+    /* Show Popup on Hover */
+    .popup-container:hover .popup-content {
+        display: block;
+    }
+
+    /* Iframe Styling */
+    .popup-content iframe {
+        border-radius: 8px;
+    }
+        <style>
+    /* Education Section Styling */
+    #education {
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        margin: 20px 0;
+    }
+
+    #education h2 {
+        font-size: 2.5em;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .education-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .education-card {
+        background: linear-gradient(45deg, #1abc9c, #16a085);
+        color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .education-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(45deg, #16a085, #1abc9c);
+    }
+
+    .education-icon {
+        font-size: 2em;
+        color: #fff;
+    }
+
+    .education-details h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .education-details p {
+        font-size: 1em;
+        margin: 5px 0;
+    }
+
+    .education-details .duration {
+        font-weight: 300;
+        color: #e1e1e1;
+    }
+
+    .education-details .degree {
+        font-weight: 500;
+    }
+
+    .education-details .cgpa,
+    .education-details .percentage {
+        font-weight: 600;
+        color: #ffeb3b;
+    }
+        #achievements {
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        margin: 20px 0;
+    }
+
+    #achievements h2 {
+        font-size: 2.5em;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .achievements-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .achievement-card {
+        background: linear-gradient(45deg, #1abc9c, #16a085);
+        color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 800px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .achievement-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(45deg, #16a085, #1abc9c);
+    }
+
+    .achievement-icon {
+        font-size: 2.5em;
+        color: #fff;
+    }
+
+    .achievement-details {
+        flex: 1;
+    }
+
+    .achievement-details h3 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .achievement-details p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .achievement-link {
+        display: inline-block;
+        background: #fff;
+        color: #1abc9c;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .achievement-link:hover {
+        background: #1abc9c;
+        color: #fff;
+        transform: translateX(5px);
+    }
+
+    .achievement-link i {
+        margin-left: 10px;
+    }#experience {
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        margin: 20px 0;
+    }
+
+    #experience h2 {
+        font-size: 2.5em;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .experience-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .experience-card {
+        background: linear-gradient(45deg, #1abc9c, #16a085);
+        color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 800px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .experience-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(45deg, #16a085, #1abc9c);
+    }
+
+    .experience-icon {
+        font-size: 2.5em;
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    .experience-details {
+        flex: 1;
+    }
+
+    .experience-details h3 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .experience-details .role {
+        font-size: 1.1em;
+        font-weight: 500;
+        margin-bottom: 15px;
+        color: #e1e1e1;
+    }
+
+    .experience-details ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .experience-details ul li {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .experience-details ul li::before {
+        content: "✔️";
+        position: absolute;
+        left: 0;
+        color: #ffeb3b;
+    }
+        #my-repo {
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        margin: 20px 0;
+    }
+
+    #my-repo h2 {
+        font-size: 2.5em;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .repo-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .repo-card {
+        background: linear-gradient(45deg, #1abc9c, #16a085);
+        color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .repo-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(45deg, #16a085, #1abc9c);
+    }
+
+    .repo-icon {
+        font-size: 3em;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+    .repo-details h3 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .repo-details p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .repo-details iframe {
+        margin-bottom: 15px;
+    }
+
+    .repo-link {
+        display: inline-block;
+        background: #fff;
+        color: #1abc9c;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .repo-link:hover {
+        background: #1abc9c;
+        color: #fff;
+        transform: translateX(5px);
+    }
+
+    .repo-link i {
+        margin-left: 10px;
+    }#about {
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        margin: 20px 0;
+    }
+
+    #about h2 {
+        font-size: 2.5em;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-card {
+        background: linear-gradient(45deg, #1abc9c, #16a085);
+        color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 800px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .about-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(45deg, #16a085, #1abc9c);
+    }
+
+    .about-icon {
+        font-size: 3em;
+        color: #fff;
+    }
+
+    .about-content {
+        flex: 1;
+    }
+
+    .about-content p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin: 0;
+    }
+        #skills {
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        margin: 20px 0;
+    }
+
+    #skills h2 {
+        font-size: 2.5em;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .skill-card {
+        background: linear-gradient(45deg, #1abc9c, #16a085);
+        color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(45deg, #16a085, #1abc9c);
+    }
+
+    .skill-icon {
+        font-size: 2.5em;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+    .skill-details h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .skill-details p {
+        font-size: 1em;
+        line-height: 1.6;
+        margin: 0;
+    }
     </style>
 </head>
 <body>
 
+    <div id="particles-js"></div>
     <div class="container">
         <header>
             <h1>SRIPAD RAMA HEBBAR</h1>
@@ -224,87 +805,210 @@
         </header>
 
         <section id="about">
-            <h2>About Me</h2>
-            <p>I am passionate about Machine Learning, Deep Learning, and Data Science, with extensive experience in AI-based chatbot development, bioinformatics research, and predictive modeling. I thrive in developing innovative AI solutions and analyzing complex datasets to derive meaningful insights. My expertise spans building intelligent systems, especially chatbots, while also contributing to bioinformatics research, leveraging advanced models to predict outcomes and trends. I enjoy blending my technical skills with creativity to solve real-world challenges and push the boundaries of AI and data science.</p>
-        </section>
-
+    <h2>About Me</h2>
+    <div class="about-container">
+        <div class="about-card">
+            <div class="about-icon">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="about-content">
+                <p>I am passionate about Machine Learning, Deep Learning, and Data Science, with extensive experience in AI-based chatbot development, bioinformatics research, and predictive modeling. I thrive in developing innovative AI solutions and analyzing complex datasets to derive meaningful insights. My expertise spans building intelligent systems, especially chatbots, while also contributing to bioinformatics research, leveraging advanced models to predict outcomes and trends. I enjoy blending my technical skills with creativity to solve real-world challenges and push the boundaries of AI and data science.</p>
+            </div>
+        </div>
+    </div>
+</section>
         <section id="education">
-            <h2>Education</h2>
-            <p><strong>Reva University</strong> (Dec 2022 - Jul 2024)<br>
-            Master of Computer Applications (MCA), CGPA: 8.49</p>
-        </section>
+    <h2>Education</h2>
+    <div class="education-container">
+        <!-- Reva University Card -->
+        <div class="education-card">
+            <div class="education-icon">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="education-details">
+                <h3>Reva University</h3>
+                <p class="duration">Dec 2022 - Jul 2024</p>
+                <p class="degree">Master of Computer Applications (MCA)</p>
+                <p class="cgpa">CGPA: 8.49</p>
+            </div>
+        </div>
 
-        <section id="achievements">
-            <h2>Achievements</h2>
-            <p>VaxOptiml" is a research initiative that leverages artificial intelligence (AI) to enhance bioinformatics and vaccine design. By integrating advanced computational techniques, VaxOptiml aims to streamline the identification of potential vaccine candidates, predict antigen-antibody interactions, and optimize vaccine formulations. This approach accelerates the development process, reduces costs, and improves the efficacy of vaccines. The project exemplifies the transformative potential of AI in modern biomedical research, offering innovative solutions to complex challenges in vaccine development.</p>
-        </section>
+        <!-- GSS BCA College Card -->
+        <div class="education-card">
+            <div class="education-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-details">
+                <h3>GSS BCA College</h3>
+                <p class="duration">July 2018 - June 2021</p>
+                <p class="degree">Bachelor's of Computer Applications (BCA)</p>
+                <p class="percentage">Percentage: 74.02%</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>Data Analysis & Statistics: Pandas, Seaborn, numpy, statsmodels</li>
-                <li>Machine Learning & Deep Learning: scikit-learn, Keras, TensorFlow, AutoML</li>
-                <li>Programming: Python, Java, HTML, JavaScript, C, SQL, MySQL</li>
-                <li>Frameworks & Tools: Flask, FastAPI, REST APIs, DevOps Basics</li>
-            </ul>
-        </section>
+<section id="achievements">
+    <h2>Achievements</h2>
+    <div class="achievements-container">
+        <div class="achievement-card">
+            <div class="achievement-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <div class="achievement-details">
+                <h3>VaxOptiml</h3>
+                <p>VaxOptiml is a research initiative that leverages artificial intelligence (AI) to enhance bioinformatics and vaccine design. By integrating advanced computational techniques, VaxOptiml aims to streamline the identification of potential vaccine candidates, predict antigen-antibody interactions, and optimize vaccine formulations. This approach accelerates the development process, reduces costs, and improves the efficacy of vaccines. The project exemplifies the transformative potential of AI in modern biomedical research, offering innovative solutions to complex challenges in vaccine development.</p>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/39644341/" target="_blank" class="achievement-link">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-container">
+        <!-- Data Analysis & Statistics Card -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="skill-details">
+                <h3>Data Analysis & Statistics</h3>
+                <p>Pandas, Seaborn, numpy, statsmodels</p>
+            </div>
+        </div>
+
+        <!-- Machine Learning & Deep Learning Card -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+            <div class="skill-details">
+                <h3>Machine Learning & Deep Learning</h3>
+                <p>scikit-learn, Keras, TensorFlow, AutoML</p>
+            </div>
+        </div>
+
+        <!-- Programming and Database Card -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <i class="fab fa-python"></i>
+            </div>
+            <div class="skill-details">
+                <h3>Programming and Database</h3>
+                <p>Python, Java, HTML, JavaScript, C, SQL, MySQL, Shell programming</p>
+            </div>
+        </div>
+
+        <!-- Frameworks & Tools Card -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <i class="fas fa-tools"></i>
+            </div>
+            <div class="skill-details">
+                <h3>Frameworks & Technologies</h3>
+                <p>Flask, FastAPI, REST APIs, DevOps Basics, AWS, Linux, Git, Cloud</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
         <section id="experience">
-            <h2>Professional Experience</h2>
-            <p><strong>Innodatatics.ai, Hyderabad</strong> - Data Science Intern (Jan 2022 – Jun 2022)</p>
-            <ul>
-                <li>Collaborated within a diverse 10-member team to develop an AI-based educational chatbot, employing cuttingedge machine learning algorithms to tailor learning experiences and redefine educational delivery methods</li>
-                <li>Contributed to creating an employee performance predictor on a web-based platform, utilizing varied machine learning techniques within a collaborative 10-member team to improve accuracy and reliability.</li>
-            </ul>
-        </section>
+    <h2>Professional Experience</h2>
+    <div class="experience-container">
+        <!-- Innodatatics.ai Card -->
+        <div class="experience-card">
+            <div class="experience-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="experience-details">
+                <h3>Innodatatics.ai, Hyderabad</h3>
+                <p class="role">Data Science Intern (Jan 2022 – Jun 2022)</p>
+                <ul>
+                    <li>Collaborated within a diverse 10-member team to develop an AI-based educational chatbot, employing cutting-edge machine learning algorithms to tailor learning experiences and redefine educational delivery methods.</li>
+                    <li>Contributed to creating an employee performance predictor on a web-based platform, utilizing varied machine learning techniques within a collaborative 10-member team to improve accuracy and reliability.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="projects">
     <h2>Academic Projects</h2>
-<ul class="project-list">
-    <li>
-        <strong>Epitope Affinity Prediction (Jan 2024 - Present)</strong>
-        <ul class="project-details">
-            <li>✔️ Led transformative immuno-informatics research, enhancing vaccine development through epitope affinity modeling based on protein hydrophobicity, improving prediction accuracy for MHC-1 and MHC-2 interactions.</li>
-            <li>✔️ Developed a novel algorithm to analyze and predict epitope binding affinities, integrating bioinformatics tools and machine learning techniques.</li>
-            <li>✔️ Collaborated with a multidisciplinary team to validate results, contributing to advancements in personalized medicine and immunology.</li>
-            <li>✔️ Utilized advanced feature engineering techniques to identify key protein properties influencing epitope binding.</li>
-            <li>✔️ Published findings in a peer-reviewed journal, showcasing a 15% improvement in prediction accuracy over existing methods.</li>
-        </ul>
-    </li>
-    <li>
-        <strong>Ransom Pattern Detection (Aug 2023 - Dec 2023)</strong>
-        <ul class="project-details">
-            <li>✔️ Utilized advanced Python, ML, and DL methodologies to optimize ransom pattern detection accuracy in Bitcoin transactions, significantly decreasing successful ransomware attacks and fortifying cybersecurity resilience.</li>
-            <li>✔️ Implemented a convolutional neural network (CNN) to identify suspicious transaction patterns, achieving a 92% detection rate.</li>
-            <li>✔️ Integrated real-time data processing pipelines to enhance system responsiveness and scalability.</li>
-            <li>✔️ Conducted extensive testing on real-world datasets, reducing false positives by 20% and enhancing the system's reliability.</li>
-            <li>✔️ Collaborated with cybersecurity experts to validate the model's effectiveness in real-world scenarios.</li>
-        </ul>
-    </li>
-    <li>
-        <strong>Deep Fake Voice Recognition (Sep 2022 - Nov 2022)</strong>
-        <ul class="project-details">
-            <li>✔️ Leveraged Python, Machine Learning, and Deep Learning to analyze and classify processed mp3 files, strengthening defenses against audio manipulation and bolstering deepfake detection capabilities.</li>
-            <li>✔️ Designed a deep learning model using TensorFlow and Keras to distinguish between authentic and synthetic audio, achieving an accuracy of 88%.</li>
-            <li>✔️ Conducted extensive data preprocessing and feature extraction, including MFCC (Mel-Frequency Cepstral Coefficients), to improve model robustness.</li>
-            <li>✔️ Evaluated the model on diverse datasets, ensuring generalizability across different audio samples.</li>
-            <li>✔️ Published a detailed report on the methodology and results, contributing to the growing body of research in deepfake detection.</li>
-        </ul>
-    </li>
-    <li>
-        <strong>DNS over HTTPS (DoH) Detection Using Deep Learning, Ensemble Techniques, AutoML, and XAI (Feb 2023 - May 2023)</strong>
-        <ul class="project-details">
-            <li>Developed a robust system to detect malicious DNS over HTTPS (DoH) traffic using deep learning, ensemble techniques, AutoML, and Explainable AI (XAI).</li>
-            <li> Utilized a dataset provided by the Canadian Institute for Cybersecurity (CIC) to train and evaluate models.</li>
-            <li>✔️ Implemented ensemble techniques including Random Forest (bagging), Gradient Boosting, AdaBoost, XGBoost, and LightGBM to improve detection accuracy and robustness.</li>
-            <li>✔️ Achieved a 94% accuracy in identifying malicious DoH traffic, significantly enhancing network security.</li>
-            <li>✔️ Integrated AutoML tools like lazypredict to automate model selection and hyperparameter tuning, reducing development time.</li>
-            <li>✔️ Applied XAI techniques such as SHAP and LIME to interpret model predictions, providing transparency and actionable insights for cybersecurity analysts.</li>
-        </ul>
-    </li>
-</ul>
+    <ul class="project-list">
+        <li>
+            <strong>Epitope Affinity Prediction (Jan 2024 - May 2024)</strong>
+            <ul class="project-details">
+                <li>✔️ Led transformative immuno-informatics research, enhancing vaccine development through epitope affinity modeling based on protein hydrophobicity, improving prediction accuracy for MHC-1 and MHC-2 interactions.</li>
+                <li>✔️ Developed a novel algorithm to analyze and predict epitope binding affinities, integrating bioinformatics tools and machine learning techniques.</li>
+                <li>✔️ Collaborated with a multidisciplinary team to validate results, contributing to advancements in personalized medicine and immunology.</li>
+                <li>✔️ Utilized advanced feature engineering techniques to identify key protein properties influencing epitope binding.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Ransom Pattern Detection (Aug 2023 - Dec 2023)</strong>
+            <ul class="project-details">
+                <li>✔️ Utilized advanced Python, ML, and DL methodologies to optimize ransom pattern detection accuracy in Bitcoin transactions, significantly decreasing successful ransomware attacks and fortifying cybersecurity resilience.</li>
+                <li>✔️ Implemented a convolutional neural network (CNN) to identify suspicious transaction patterns, achieving a 92% detection rate.</li>
+                <li>✔️ Integrated real-time data processing pipelines to enhance system responsiveness and scalability.</li>
+                <li>✔️ Conducted extensive testing on real-world datasets, reducing false positives by 20% and enhancing the system's reliability.</li>
+                <li>✔️ Collaborated with cybersecurity experts to validate the model's effectiveness in real-world scenarios.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Deep Fake Voice Recognition (April 2023 - June 2023)</strong>
+            <ul class="project-details">
+                <li>✔️ Leveraged Python, Machine Learning, and Deep Learning to analyze and classify processed mp3 files, strengthening defenses against audio manipulation and bolstering deepfake detection capabilities.</li>
+                <li>✔️ Designed a deep learning model using TensorFlow and Keras to distinguish between authentic and synthetic audio, achieving an accuracy of 88%.</li>
+                <li>✔️ Conducted extensive data preprocessing and feature extraction, including MFCC (Mel-Frequency Cepstral Coefficients), to improve model robustness.</li>
+                <li>✔️ Evaluated the model on diverse datasets, ensuring generalizability across different audio samples.</li>
+                <li>✔️ Published a detailed report on the methodology and results, contributing to the growing body of research in deepfake detection.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>DNS over HTTPS (DoH) Detection Using Deep Learning, Ensemble Techniques, AutoML, and XAI (Jan 2023 - March 2023)</strong>
+            <ul class="project-details">
+                <li>Developed a robust system to detect malicious DNS over HTTPS (DoH) traffic using deep learning, ensemble techniques, AutoML, and Explainable AI (XAI).</li>
+                <li> Utilized a dataset provided by the Canadian Institute for Cybersecurity (CIC) to train and evaluate models.</li>
+                <li>✔️ Implemented ensemble techniques including Random Forest (bagging), Gradient Boosting, AdaBoost, XGBoost, and LightGBM to improve detection accuracy and robustness.</li>
+                <li>✔️ Achieved a 94% accuracy in identifying malicious DoH traffic, significantly enhancing network security.</li>
+                <li>✔️ Integrated AutoML tools like lazypredict to automate model selection and hyperparameter tuning, reducing development time.</li>
+                <li>✔️ Applied XAI techniques such as SHAP and LIME to interpret model predictions, providing transparency and actionable insights for cybersecurity analysts.</li>
+            </ul>
+        </li>
+    </ul>
 </section>
 
+        <section id="my-repo">
+    <h2>My Repositories</h2>
+    <div class="repo-container">
+        <!-- GitHub Repo Card -->
+        <div class="repo-card github">
+            <div class="repo-icon">
+                <i class="fab fa-github"></i>
+            </div>
+            <div class="repo-details">
+                <h3>GitHub</h3>
+                <p>Check out my projects and contributions on GitHub.</p>
+                <iframe src="https://ghbtns.com/github-btn.html?user=sripad2020&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+            </div>
+        </div>
+
+        <!-- Kaggle Repo Card -->
+        <div class="repo-card kaggle">
+            <div class="repo-icon">
+                <i class="fab fa-kaggle"></i>
+            </div>
+            <div class="repo-details">
+                <h3>Kaggle</h3>
+                <p>Explore my datasets and notebooks on Kaggle.</p>
+                <iframe src="https://www.kaggle.com/static/images/notebook-banner.png" frameborder="0" scrolling="no" width="230" height="30" title="Kaggle"></iframe>
+                <a href="https://www.kaggle.com/sripadkarthik" target="_blank" class="repo-link">Visit My Kaggle Profile <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
         <section id="contact">
             <h2>Contact</h2>
             <div class="contact-info">
@@ -319,12 +1023,174 @@
             <a href="/connect" class="btn">Contact Me</a>
         </div>
 
-
         <div class="division">
             <h2>Let's Connect!</h2>
             <p>Feel free to reach out for collaborations, projects, or just to chat about the exciting world of Data Science and AI!</p>
         </div>
     </div>
 
+    <script>
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".container", {
+            duration: 1.5,
+            opacity: 0,
+            y: 50,
+            ease: "power3.out",
+        });
+
+        gsap.from("header h1", {
+            duration: 1,
+            opacity: 0,
+            y: -50,
+            delay: 0.5,
+            ease: "power3.out",
+        });
+
+        gsap.from("header .tagline", {
+            duration: 1,
+            opacity: 0,
+            y: -50,
+            delay: 0.8,
+            ease: "power3.out",
+        });
+
+        gsap.from("section", {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: "section",
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none none",
+            },
+        });
+
+        gsap.from(".btn", {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            delay: 1.5,
+            ease: "power3.out",
+        });
+
+        gsap.from(".division", {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            delay: 1.8,
+            ease: "power3.out",
+        });
+
+        // Particles.js Configuration
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
