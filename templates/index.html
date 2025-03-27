@@ -1,14 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sripad Rama Hebbar - Portfolio</title>
+    <title>Sripad Rama Hebbar - Data Analyst | AI Researcher | Python Developer</title>
+    <meta name="description" content="Professional portfolio of Sripad Rama Hebbar showcasing expertise in Data Science, Machine Learning, and AI Research with published work in bioinformatics.">
+    <meta name="keywords" content="Data Analyst, AI Researcher, Python Developer, Machine Learning, Deep Learning, Bioinformatics, Portfolio">
+    <meta name="author" content="Sripad Rama Hebbar">
+    <meta property="og:title" content="Sripad Rama Hebbar - Professional Portfolio">
+    <meta property="og:description" content="Data Science and AI Research portfolio showcasing machine learning projects and bioinformatics research.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://info-dev-3.onrender.com/">
+    <link rel="canonical" href="https://info-dev-3.onrender.com/" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sripad Rama Hebbar",
+      "jobTitle": "Data Analyst | AI Researcher | Python Developer",
+      "url": "https://info-dev-3.onrender.com/",
+      "sameAs": [
+        "https://github.com/sripad2020",
+        "https://www.linkedin.com/in/SripadRH/",
+        "https://www.kaggle.com/sripadkarthik"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Reva University"
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Data Science Intern",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Innodatatics.ai"
+        }
+      }
+    }
+    </script>
     <style>
         /* Keyframes for background animation */
         @keyframes gradientAnimation {
@@ -23,9 +59,9 @@
             }
         }
         #skills ul li i {
-    font-size: 1.2em;
-    margin-right: 10px;
-}
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
         @keyframes glow {
             0% {
                 box-shadow: 0 0 20px rgba(200, 90, 100, 0.2), 0 0 40px rgba(255, 195, 113, 0.6), 0 0 60px rgba(88, 177, 159, 0.6), 0 0 80px rgba(108, 91, 123, 0.6), 0 0 100px rgba(243, 156, 18, 0.6);
@@ -140,6 +176,11 @@
             color: #16a085;
         }
 
+        a:focus {
+            outline: 2px solid #1abc9c;
+            outline-offset: 2px;
+        }
+
         footer {
             text-align: center;
             padding: 10px;
@@ -194,6 +235,11 @@
             box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
         }
 
+        .btn:focus {
+            outline: 2px solid #1abc9c;
+            outline-offset: 2px;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -235,568 +281,530 @@
             font-weight: 300;
         }
         .project-list li strong {
-    display: inline-block;
-    font-size: 1.4em;
-    font-weight: 700;
-    color: #fff;
-    background: linear-gradient(45deg, #1abc9c, #16a085);
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-}
+            display: inline-block;
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
 
-.project-list li strong:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(45deg, #16a085, #1abc9c);
-}
+        .project-list li strong:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #16a085, #1abc9c);
+        }
         .popup-container {
-        position: relative;
-        display: inline-block;
-        margin-top: 20px;
-    }
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
 
-    /* Popup Button */
-    .popup-button {
-        background: linear-gradient(45deg, #1abc9c, #16a085);
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        font-size: 1em;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+        /* Popup Button */
+        .popup-button {
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    .popup-button:hover {
-        background: linear-gradient(45deg, #16a085, #1abc9c);
-        transform: translateY(-3px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
+        .popup-button:hover {
+            background: linear-gradient(45deg, #16a085, #1abc9c);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
 
-    /* Popup Content (Hidden by Default) */
-    .popup-content {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        z-index: 10;
-        padding: 10px;
-    }
+        /* Popup Content (Hidden by Default) */
+        .popup-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            padding: 10px;
+        }
 
-    /* Show Popup on Hover */
-    .popup-container:hover .popup-content {
-        display: block;
-    }
+        /* Show Popup on Hover */
+        .popup-container:hover .popup-content {
+            display: block;
+        }
 
-    /* Iframe Styling */
-    .popup-content iframe {
-        border-radius: 8px;
-    }.popup-container {
-        position: relative;
-        display: inline-block;
-        margin-top: 20px;
-    }
+        /* Iframe Styling */
+        .popup-content iframe {
+            border-radius: 8px;
+        }
+        /* Education Section Styling */
+        #education {
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin: 20px 0;
+        }
 
-    /* Popup Button */
-    .popup-button {
-        background: linear-gradient(45deg, #1abc9c, #16a085);
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        font-size: 1em;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+        #education h2 {
+            font-size: 2.5em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-    .popup-button:hover {
-        background: linear-gradient(45deg, #16a085, #1abc9c);
-        transform: translateY(-3px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
+        .education-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
 
-    /* Popup Content (Hidden by Default) */
-    .popup-content {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        z-index: 10;
-        padding: 10px;
-    }
+        .education-card {
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-    /* Show Popup on Hover */
-    .popup-container:hover .popup-content {
-        display: block;
-    }
+        .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #16a085, #1abc9c);
+        }
 
-    /* Iframe Styling */
-    .popup-content iframe {
-        border-radius: 8px;
-    }
-        <style>
-    /* Education Section Styling */
-    #education {
-        padding: 40px 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        margin: 20px 0;
-    }
+        .education-icon {
+            font-size: 2em;
+            color: #fff;
+        }
 
-    #education h2 {
-        font-size: 2.5em;
-        color: #fff;
-        text-align: center;
-        margin-bottom: 30px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
+        .education-details h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
 
-    .education-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
+        .education-details p {
+            font-size: 1em;
+            margin: 5px 0;
+        }
 
-    .education-card {
-        background: linear-gradient(45deg, #1abc9c, #16a085);
-        color: #fff;
-        padding: 20px;
-        border-radius: 15px;
-        width: 300px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease-in-out;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
+        .education-details .duration {
+            font-weight: 300;
+            color: #e1e1e1;
+        }
 
-    .education-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(45deg, #16a085, #1abc9c);
-    }
+        .education-details .degree {
+            font-weight: 500;
+        }
 
-    .education-icon {
-        font-size: 2em;
-        color: #fff;
-    }
-
-    .education-details h3 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
-
-    .education-details p {
-        font-size: 1em;
-        margin: 5px 0;
-    }
-
-    .education-details .duration {
-        font-weight: 300;
-        color: #e1e1e1;
-    }
-
-    .education-details .degree {
-        font-weight: 500;
-    }
-
-    .education-details .cgpa,
-    .education-details .percentage {
-        font-weight: 600;
-        color: #ffeb3b;
-    }
+        .education-details .cgpa,
+        .education-details .percentage {
+            font-weight: 600;
+            color: #ffeb3b;
+        }
         #achievements {
-        padding: 40px 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        margin: 20px 0;
-    }
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin: 20px 0;
+        }
 
-    #achievements h2 {
-        font-size: 2.5em;
-        color: #fff;
-        text-align: center;
-        margin-bottom: 30px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
+        #achievements h2 {
+            font-size: 2.5em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-    .achievements-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
+        .achievements-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
 
-    .achievement-card {
-        background: linear-gradient(45deg, #1abc9c, #16a085);
-        color: #fff;
-        padding: 20px;
-        border-radius: 15px;
-        width: 100%;
-        max-width: 800px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease-in-out;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
+        .achievement-card {
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-    .achievement-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(45deg, #16a085, #1abc9c);
-    }
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #16a085, #1abc9c);
+        }
 
-    .achievement-icon {
-        font-size: 2.5em;
-        color: #fff;
-    }
+        .achievement-icon {
+            font-size: 2.5em;
+            color: #fff;
+        }
 
-    .achievement-details {
-        flex: 1;
-    }
+        .achievement-details {
+            flex: 1;
+        }
 
-    .achievement-details h3 {
-        font-size: 1.8em;
-        margin-bottom: 10px;
-    }
+        .achievement-details h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
 
-    .achievement-details p {
-        font-size: 1.1em;
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
+        .achievement-details p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
 
-    .achievement-link {
-        display: inline-block;
-        background: #fff;
-        color: #1abc9c;
-        padding: 10px 20px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease-in-out;
-    }
+        .achievement-link {
+            display: inline-block;
+            background: #fff;
+            color: #1abc9c;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+        }
 
-    .achievement-link:hover {
-        background: #1abc9c;
-        color: #fff;
-        transform: translateX(5px);
-    }
+        .achievement-link:hover {
+            background: #1abc9c;
+            color: #fff;
+            transform: translateX(5px);
+        }
 
-    .achievement-link i {
-        margin-left: 10px;
-    }#experience {
-        padding: 40px 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        margin: 20px 0;
-    }
+        .achievement-link i {
+            margin-left: 10px;
+        }#experience {
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin: 20px 0;
+        }
 
-    #experience h2 {
-        font-size: 2.5em;
-        color: #fff;
-        text-align: center;
-        margin-bottom: 30px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
+        #experience h2 {
+            font-size: 2.5em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-    .experience-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
+        .experience-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
 
-    .experience-card {
-        background: linear-gradient(45deg, #1abc9c, #16a085);
-        color: #fff;
-        padding: 20px;
-        border-radius: 15px;
-        width: 100%;
-        max-width: 800px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease-in-out;
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
-    }
+        .experience-card {
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
 
-    .experience-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(45deg, #16a085, #1abc9c);
-    }
+        .experience-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #16a085, #1abc9c);
+        }
 
-    .experience-icon {
-        font-size: 2.5em;
-        color: #fff;
-        margin-top: 10px;
-    }
+        .experience-icon {
+            font-size: 2.5em;
+            color: #fff;
+            margin-top: 10px;
+        }
 
-    .experience-details {
-        flex: 1;
-    }
+        .experience-details {
+            flex: 1;
+        }
 
-    .experience-details h3 {
-        font-size: 1.8em;
-        margin-bottom: 10px;
-    }
+        .experience-details h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
 
-    .experience-details .role {
-        font-size: 1.1em;
-        font-weight: 500;
-        margin-bottom: 15px;
-        color: #e1e1e1;
-    }
+        .experience-details .role {
+            font-size: 1.1em;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #e1e1e1;
+        }
 
-    .experience-details ul {
-        list-style-type: none;
-        padding: 0;
-    }
+        .experience-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-    .experience-details ul li {
-        font-size: 1.1em;
-        line-height: 1.6;
-        margin-bottom: 10px;
-        padding-left: 20px;
-        position: relative;
-    }
+        .experience-details ul li {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
 
-    .experience-details ul li::before {
-        content: "✔️";
-        position: absolute;
-        left: 0;
-        color: #ffeb3b;
-    }
+        .experience-details ul li::before {
+            content: "✔️";
+            position: absolute;
+            left: 0;
+            color: #ffeb3b;
+        }
         #my-repo {
-        padding: 40px 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        margin: 20px 0;
-    }
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin: 20px 0;
+        }
 
-    #my-repo h2 {
-        font-size: 2.5em;
-        color: #fff;
-        text-align: center;
-        margin-bottom: 30px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
+        #my-repo h2 {
+            font-size: 2.5em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-    .repo-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
+        .repo-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
 
-    .repo-card {
-        background: linear-gradient(45deg, #1abc9c, #16a085);
-        color: #fff;
-        padding: 20px;
-        border-radius: 15px;
-        width: 100%;
-        max-width: 400px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+        .repo-card {
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
-    .repo-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(45deg, #16a085, #1abc9c);
-    }
+        .repo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #16a085, #1abc9c);
+        }
 
-    .repo-icon {
-        font-size: 3em;
-        color: #fff;
-        margin-bottom: 15px;
-    }
+        .repo-icon {
+            font-size: 3em;
+            color: #fff;
+            margin-bottom: 15px;
+        }
 
-    .repo-details h3 {
-        font-size: 1.8em;
-        margin-bottom: 10px;
-    }
+        .repo-details h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
 
-    .repo-details p {
-        font-size: 1.1em;
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
+        .repo-details p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
 
-    .repo-details iframe {
-        margin-bottom: 15px;
-    }
+        .repo-details iframe {
+            margin-bottom: 15px;
+        }
 
-    .repo-link {
-        display: inline-block;
-        background: #fff;
-        color: #1abc9c;
-        padding: 10px 20px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease-in-out;
-    }
+        .repo-link {
+            display: inline-block;
+            background: #fff;
+            color: #1abc9c;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+        }
 
-    .repo-link:hover {
-        background: #1abc9c;
-        color: #fff;
-        transform: translateX(5px);
-    }
+        .repo-link:hover {
+            background: #1abc9c;
+            color: #fff;
+            transform: translateX(5px);
+        }
 
-    .repo-link i {
-        margin-left: 10px;
-    }#about {
-        padding: 40px 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        margin: 20px 0;
-    }
+        .repo-link i {
+            margin-left: 10px;
+        }#about {
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin: 20px 0;
+        }
 
-    #about h2 {
-        font-size: 2.5em;
-        color: #fff;
-        text-align: center;
-        margin-bottom: 30px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
+        #about h2 {
+            font-size: 2.5em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-    .about-container {
-        display: flex;
-        justify-content: center;
-    }
+        .about-container {
+            display: flex;
+            justify-content: center;
+        }
 
-    .about-card {
-        background: linear-gradient(45deg, #1abc9c, #16a085);
-        color: #fff;
-        padding: 20px;
-        border-radius: 15px;
-        width: 100%;
-        max-width: 800px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease-in-out;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
+        .about-card {
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-    .about-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(45deg, #16a085, #1abc9c);
-    }
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #16a085, #1abc9c);
+        }
 
-    .about-icon {
-        font-size: 3em;
-        color: #fff;
-    }
+        .about-icon {
+            font-size: 3em;
+            color: #fff;
+        }
 
-    .about-content {
-        flex: 1;
-    }
+        .about-content {
+            flex: 1;
+        }
 
-    .about-content p {
-        font-size: 1.1em;
-        line-height: 1.6;
-        margin: 0;
-    }
+        .about-content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 0;
+        }
         #skills {
-        padding: 40px 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        margin: 20px 0;
-    }
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin: 20px 0;
+        }
 
-    #skills h2 {
-        font-size: 2.5em;
-        color: #fff;
-        text-align: center;
-        margin-bottom: 30px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
+        #skills h2 {
+            font-size: 2.5em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-    .skills-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
 
-    .skill-card {
-        background: linear-gradient(45deg, #1abc9c, #16a085);
-        color: #fff;
-        padding: 20px;
-        border-radius: 15px;
-        width: 100%;
-        max-width: 300px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+        .skill-card {
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
-    .skill-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(45deg, #16a085, #1abc9c);
-    }
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #16a085, #1abc9c);
+        }
 
-    .skill-icon {
-        font-size: 2.5em;
-        color: #fff;
-        margin-bottom: 15px;
-    }
+        .skill-icon {
+            font-size: 2.5em;
+            color: #fff;
+            margin-bottom: 15px;
+        }
 
-    .skill-details h3 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
+        .skill-details h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
 
-    .skill-details p {
-        font-size: 1em;
-        line-height: 1.6;
-        margin: 0;
-    }
+        .skill-details p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
     </style>
 </head>
 <body>
-
     <div id="particles-js"></div>
     <div class="container">
         <header>
@@ -804,229 +812,251 @@
             <p class="tagline">Data Analyst | AI Researcher | Python Developer | Freelancer | Computer Tutor</p>
         </header>
 
-        <section id="about">
-    <h2>About Me</h2>
-    <div class="about-container">
-        <div class="about-card">
-            <div class="about-icon">
-                <i class="fas fa-user"></i>
-            </div>
-            <div class="about-content">
-                <p>I am passionate about Machine Learning, Deep Learning, and Data Science, with extensive experience in AI-based chatbot development, bioinformatics research, and predictive modeling. I thrive in developing innovative AI solutions and analyzing complex datasets to derive meaningful insights. My expertise spans building intelligent systems, especially chatbots, while also contributing to bioinformatics research, leveraging advanced models to predict outcomes and trends. I enjoy blending my technical skills with creativity to solve real-world challenges and push the boundaries of AI and data science.</p>
-            </div>
-        </div>
-    </div>
-</section>
-        <section id="education">
-    <h2>Education</h2>
-    <div class="education-container">
-        <!-- Reva University Card -->
-        <div class="education-card">
-            <div class="education-icon">
-                <i class="fas fa-university"></i>
-            </div>
-            <div class="education-details">
-                <h3>Reva University</h3>
-                <p class="duration">Dec 2022 - Jul 2024</p>
-                <p class="degree">Master of Computer Applications (MCA)</p>
-                <p class="cgpa">CGPA: 8.49</p>
-            </div>
-        </div>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="about-container">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            <span class="sr-only">User Profile</span>
+                        </div>
+                        <div class="about-content">
+                            <h1>Sripad Rama Hebbar - Data Science & AI Specialist</h1>
+                            <p>Professional Data Analyst and AI Researcher with expertise in Machine Learning, Deep Learning, and Bioinformatics. Specializing in:</p>
+                            <ul>
+                                <li>AI-based chatbot development</li>
+                                <li>Bioinformatics research and vaccine design</li>
+                                <li>Predictive modeling and data analysis</li>
+                                <li>Python development and algorithm design</li>
+                            </ul>
+                            <p>With a Master's in Computer Applications and multiple published research projects, I combine technical skills with innovative problem-solving to create impactful AI solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- GSS BCA College Card -->
-        <div class="education-card">
-            <div class="education-icon">
-                <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="education-details">
-                <h3>GSS BCA College</h3>
-                <p class="duration">July 2018 - June 2021</p>
-                <p class="degree">Bachelor's of Computer Applications (BCA)</p>
-                <p class="percentage">Percentage: 74.02%</p>
-            </div>
-        </div>
-    </div>
-</section>
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-container">
+                    <!-- Reva University Card -->
+                    <article class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-university" aria-hidden="true"></i>
+                            <span class="sr-only">University</span>
+                        </div>
+                        <div class="education-details">
+                            <h3>Reva University</h3>
+                            <p class="duration">Dec 2022 - Jul 2024</p>
+                            <p class="degree">Master of Computer Applications (MCA)</p>
+                            <p class="cgpa">CGPA: 8.49</p>
+                        </div>
+                    </article>
 
-<section id="achievements">
-    <h2>Achievements</h2>
-    <div class="achievements-container">
-        <div class="achievement-card">
-            <div class="achievement-icon">
-                <i class="fas fa-trophy"></i>
-            </div>
-            <div class="achievement-details">
-                <h3>VaxOptiml</h3>
-                <p>VaxOptiml is a research initiative that leverages artificial intelligence (AI) to enhance bioinformatics and vaccine design. By integrating advanced computational techniques, VaxOptiml aims to streamline the identification of potential vaccine candidates, predict antigen-antibody interactions, and optimize vaccine formulations. This approach accelerates the development process, reduces costs, and improves the efficacy of vaccines. The project exemplifies the transformative potential of AI in modern biomedical research, offering innovative solutions to complex challenges in vaccine development.</p>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/39644341/" target="_blank" class="achievement-link">Read More <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
+                    <!-- GSS BCA College Card -->
+                    <article class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            <span class="sr-only">Graduation</span>
+                        </div>
+                        <div class="education-details">
+                            <h3>GSS BCA College</h3>
+                            <p class="duration">July 2018 - June 2021</p>
+                            <p class="degree">Bachelor's of Computer Applications (BCA)</p>
+                            <p class="percentage">Percentage: 74.02%</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="achievements">
+                <h2>Achievements</h2>
+                <div class="achievements-container">
+                    <article class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy" aria-hidden="true"></i>
+                            <span class="sr-only">Achievement</span>
+                        </div>
+                        <div class="achievement-details">
+                            <h3>VaxOptiml</h3>
+                            <p>VaxOptiml is a research initiative that leverages artificial intelligence (AI) to enhance bioinformatics and vaccine design. By integrating advanced computational techniques, VaxOptiml aims to streamline the identification of potential vaccine candidates, predict antigen-antibody interactions, and optimize vaccine formulations. This approach accelerates the development process, reduces costs, and improves the efficacy of vaccines. The project exemplifies the transformative potential of AI in modern biomedical research, offering innovative solutions to complex challenges in vaccine development.</p>
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/39644341/" target="_blank" class="achievement-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
             <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills-container">
-        <!-- Data Analysis & Statistics Card -->
-        <div class="skill-card">
-            <div class="skill-icon">
-                <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="skill-details">
-                <h3>Data Analysis & Statistics</h3>
-                <p>Pandas, Seaborn, numpy, statsmodels</p>
-            </div>
-        </div>
+                <h2>Technical Skills</h2>
+                <div class="skills-container">
+                    <!-- Data Analysis & Statistics Card -->
+                    <article class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                            <span class="sr-only">Data Analysis</span>
+                        </div>
+                        <div class="skill-details">
+                            <h3>Data Analysis & Statistics</h3>
+                            <p>Pandas, Seaborn, numpy, statsmodels</p>
+                        </div>
+                    </article>
 
-        <!-- Machine Learning & Deep Learning Card -->
-        <div class="skill-card">
-            <div class="skill-icon">
-                <i class="fas fa-brain"></i>
-            </div>
-            <div class="skill-details">
-                <h3>Machine Learning & Deep Learning</h3>
-                <p>scikit-learn, Keras, TensorFlow, AutoML</p>
-            </div>
-        </div>
+                    <!-- Machine Learning & Deep Learning Card -->
+                    <article class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain" aria-hidden="true"></i>
+                            <span class="sr-only">Machine Learning</span>
+                        </div>
+                        <div class="skill-details">
+                            <h3>Machine Learning & Deep Learning</h3>
+                            <p>scikit-learn, Keras, TensorFlow, AutoML</p>
+                        </div>
+                    </article>
 
-        <!-- Programming and Database Card -->
-        <div class="skill-card">
-            <div class="skill-icon">
-                <i class="fab fa-python"></i>
-            </div>
-            <div class="skill-details">
-                <h3>Programming and Database</h3>
-                <p>Python, Java, HTML, JavaScript, C, SQL, MySQL, Shell programming</p>
-            </div>
-        </div>
+                    <!-- Programming and Database Card -->
+                    <article class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-python" aria-hidden="true"></i>
+                            <span class="sr-only">Programming</span>
+                        </div>
+                        <div class="skill-details">
+                            <h3>Programming and Database</h3>
+                            <p>Python, Java, HTML, JavaScript, C, SQL, MySQL, Shell programming</p>
+                        </div>
+                    </article>
 
-        <!-- Frameworks & Tools Card -->
-        <div class="skill-card">
-            <div class="skill-icon">
-                <i class="fas fa-tools"></i>
-            </div>
-            <div class="skill-details">
-                <h3>Frameworks & Technologies</h3>
-                <p>Flask, FastAPI, REST APIs, DevOps Basics, AWS, Linux, Git, Cloud</p>
-            </div>
-        </div>
-    </div>
-</section>
+                    <!-- Frameworks & Tools Card -->
+                    <article class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-tools" aria-hidden="true"></i>
+                            <span class="sr-only">Frameworks</span>
+                        </div>
+                        <div class="skill-details">
+                            <h3>Frameworks & Technologies</h3>
+                            <p>Flask, FastAPI, REST APIs, DevOps Basics, AWS, Linux, Git, Cloud</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                <div class="experience-container">
+                    <!-- Innodatatics.ai Card -->
+                    <article class="experience-card">
+                        <div class="experience-icon">
+                            <i class="fas fa-briefcase" aria-hidden="true"></i>
+                            <span class="sr-only">Work Experience</span>
+                        </div>
+                        <div class="experience-details">
+                            <h3>Innodatatics.ai, Hyderabad</h3>
+                            <p class="role">Data Science Intern (Jan 2022 – Jun 2022)</p>
+                            <ul>
+                                <li>Collaborated within a diverse 10-member team to develop an AI-based educational chatbot, employing cutting-edge machine learning algorithms to tailor learning experiences and redefine educational delivery methods.</li>
+                                <li>Contributed to creating an employee performance predictor on a web-based platform, utilizing varied machine learning techniques within a collaborative 10-member team to improve accuracy and reliability.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-        <section id="experience">
-    <h2>Professional Experience</h2>
-    <div class="experience-container">
-        <!-- Innodatatics.ai Card -->
-        <div class="experience-card">
-            <div class="experience-icon">
-                <i class="fas fa-briefcase"></i>
-            </div>
-            <div class="experience-details">
-                <h3>Innodatatics.ai, Hyderabad</h3>
-                <p class="role">Data Science Intern (Jan 2022 – Jun 2022)</p>
-                <ul>
-                    <li>Collaborated within a diverse 10-member team to develop an AI-based educational chatbot, employing cutting-edge machine learning algorithms to tailor learning experiences and redefine educational delivery methods.</li>
-                    <li>Contributed to creating an employee performance predictor on a web-based platform, utilizing varied machine learning techniques within a collaborative 10-member team to improve accuracy and reliability.</li>
+            <section id="projects">
+                <h2>Academic Projects</h2>
+                <ul class="project-list">
+                    <li>
+                        <strong>Epitope Affinity Prediction (Jan 2024 - May 2024)</strong>
+                        <ul class="project-details">
+                            <li>✔️ Led transformative immuno-informatics research, enhancing vaccine development through epitope affinity modeling based on protein hydrophobicity, improving prediction accuracy for MHC-1 and MHC-2 interactions.</li>
+                            <li>✔️ Developed a novel algorithm to analyze and predict epitope binding affinities, integrating bioinformatics tools and machine learning techniques.</li>
+                            <li>✔️ Collaborated with a multidisciplinary team to validate results, contributing to advancements in personalized medicine and immunology.</li>
+                            <li>✔️ Utilized advanced feature engineering techniques to identify key protein properties influencing epitope binding.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Ransom Pattern Detection (Aug 2023 - Dec 2023)</strong>
+                        <ul class="project-details">
+                            <li>✔️ Utilized advanced Python, ML, and DL methodologies to optimize ransom pattern detection accuracy in Bitcoin transactions, significantly decreasing successful ransomware attacks and fortifying cybersecurity resilience.</li>
+                            <li>✔️ Implemented a convolutional neural network (CNN) to identify suspicious transaction patterns, achieving a 92% detection rate.</li>
+                            <li>✔️ Integrated real-time data processing pipelines to enhance system responsiveness and scalability.</li>
+                            <li>✔️ Conducted extensive testing on real-world datasets, reducing false positives by 20% and enhancing the system's reliability.</li>
+                            <li>✔️ Collaborated with cybersecurity experts to validate the model's effectiveness in real-world scenarios.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Deep Fake Voice Recognition (April 2023 - June 2023)</strong>
+                        <ul class="project-details">
+                            <li>✔️ Leveraged Python, Machine Learning, and Deep Learning to analyze and classify processed mp3 files, strengthening defenses against audio manipulation and bolstering deepfake detection capabilities.</li>
+                            <li>✔️ Designed a deep learning model using TensorFlow and Keras to distinguish between authentic and synthetic audio, achieving an accuracy of 88%.</li>
+                            <li>✔️ Conducted extensive data preprocessing and feature extraction, including MFCC (Mel-Frequency Cepstral Coefficients), to improve model robustness.</li>
+                            <li>✔️ Evaluated the model on diverse datasets, ensuring generalizability across different audio samples.</li>
+                            <li>✔️ Published a detailed report on the methodology and results, contributing to the growing body of research in deepfake detection.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>DNS over HTTPS (DoH) Detection Using Deep Learning, Ensemble Techniques, AutoML, and XAI (Jan 2023 - March 2023)</strong>
+                        <ul class="project-details">
+                            <li>Developed a robust system to detect malicious DNS over HTTPS (DoH) traffic using deep learning, ensemble techniques, AutoML, and Explainable AI (XAI).</li>
+                            <li> Utilized a dataset provided by the Canadian Institute for Cybersecurity (CIC) to train and evaluate models.</li>
+                            <li>✔️ Implemented ensemble techniques including Random Forest (bagging), Gradient Boosting, AdaBoost, XGBoost, and LightGBM to improve detection accuracy and robustness.</li>
+                            <li>✔️ Achieved a 94% accuracy in identifying malicious DoH traffic, significantly enhancing network security.</li>
+                            <li>✔️ Integrated AutoML tools like lazypredict to automate model selection and hyperparameter tuning, reducing development time.</li>
+                            <li>✔️ Applied XAI techniques such as SHAP and LIME to interpret model predictions, providing transparency and actionable insights for cybersecurity analysts.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
 
-        <section id="projects">
-    <h2>Academic Projects</h2>
-    <ul class="project-list">
-        <li>
-            <strong>Epitope Affinity Prediction (Jan 2024 - May 2024)</strong>
-            <ul class="project-details">
-                <li>✔️ Led transformative immuno-informatics research, enhancing vaccine development through epitope affinity modeling based on protein hydrophobicity, improving prediction accuracy for MHC-1 and MHC-2 interactions.</li>
-                <li>✔️ Developed a novel algorithm to analyze and predict epitope binding affinities, integrating bioinformatics tools and machine learning techniques.</li>
-                <li>✔️ Collaborated with a multidisciplinary team to validate results, contributing to advancements in personalized medicine and immunology.</li>
-                <li>✔️ Utilized advanced feature engineering techniques to identify key protein properties influencing epitope binding.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Ransom Pattern Detection (Aug 2023 - Dec 2023)</strong>
-            <ul class="project-details">
-                <li>✔️ Utilized advanced Python, ML, and DL methodologies to optimize ransom pattern detection accuracy in Bitcoin transactions, significantly decreasing successful ransomware attacks and fortifying cybersecurity resilience.</li>
-                <li>✔️ Implemented a convolutional neural network (CNN) to identify suspicious transaction patterns, achieving a 92% detection rate.</li>
-                <li>✔️ Integrated real-time data processing pipelines to enhance system responsiveness and scalability.</li>
-                <li>✔️ Conducted extensive testing on real-world datasets, reducing false positives by 20% and enhancing the system's reliability.</li>
-                <li>✔️ Collaborated with cybersecurity experts to validate the model's effectiveness in real-world scenarios.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Deep Fake Voice Recognition (April 2023 - June 2023)</strong>
-            <ul class="project-details">
-                <li>✔️ Leveraged Python, Machine Learning, and Deep Learning to analyze and classify processed mp3 files, strengthening defenses against audio manipulation and bolstering deepfake detection capabilities.</li>
-                <li>✔️ Designed a deep learning model using TensorFlow and Keras to distinguish between authentic and synthetic audio, achieving an accuracy of 88%.</li>
-                <li>✔️ Conducted extensive data preprocessing and feature extraction, including MFCC (Mel-Frequency Cepstral Coefficients), to improve model robustness.</li>
-                <li>✔️ Evaluated the model on diverse datasets, ensuring generalizability across different audio samples.</li>
-                <li>✔️ Published a detailed report on the methodology and results, contributing to the growing body of research in deepfake detection.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>DNS over HTTPS (DoH) Detection Using Deep Learning, Ensemble Techniques, AutoML, and XAI (Jan 2023 - March 2023)</strong>
-            <ul class="project-details">
-                <li>Developed a robust system to detect malicious DNS over HTTPS (DoH) traffic using deep learning, ensemble techniques, AutoML, and Explainable AI (XAI).</li>
-                <li> Utilized a dataset provided by the Canadian Institute for Cybersecurity (CIC) to train and evaluate models.</li>
-                <li>✔️ Implemented ensemble techniques including Random Forest (bagging), Gradient Boosting, AdaBoost, XGBoost, and LightGBM to improve detection accuracy and robustness.</li>
-                <li>✔️ Achieved a 94% accuracy in identifying malicious DoH traffic, significantly enhancing network security.</li>
-                <li>✔️ Integrated AutoML tools like lazypredict to automate model selection and hyperparameter tuning, reducing development time.</li>
-                <li>✔️ Applied XAI techniques such as SHAP and LIME to interpret model predictions, providing transparency and actionable insights for cybersecurity analysts.</li>
-            </ul>
-        </li>
-    </ul>
-</section>
+            <section id="my-repo">
+                <h2>My Repositories</h2>
+                <div class="repo-container">
+                    <!-- GitHub Repo Card -->
+                    <article class="repo-card github">
+                        <div class="repo-icon">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            <span class="sr-only">GitHub</span>
+                        </div>
+                        <div class="repo-details">
+                            <h3>GitHub</h3>
+                            <p>Check out my projects and contributions on GitHub.</p>
+                            <iframe loading="lazy" src="https://ghbtns.com/github-btn.html?user=sripad2020&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+                        </div>
+                    </article>
 
-        <section id="my-repo">
-    <h2>My Repositories</h2>
-    <div class="repo-container">
-        <!-- GitHub Repo Card -->
-        <div class="repo-card github">
-            <div class="repo-icon">
-                <i class="fab fa-github"></i>
-            </div>
-            <div class="repo-details">
-                <h3>GitHub</h3>
-                <p>Check out my projects and contributions on GitHub.</p>
-                <iframe src="https://ghbtns.com/github-btn.html?user=sripad2020&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
-            </div>
-        </div>
+                    <!-- Kaggle Repo Card -->
+                    <article class="repo-card kaggle">
+                        <div class="repo-icon">
+                            <i class="fab fa-kaggle" aria-hidden="true"></i>
+                            <span class="sr-only">Kaggle</span>
+                        </div>
+                        <div class="repo-details">
+                            <h3>Kaggle</h3>
+                            <p>Explore my datasets and notebooks on Kaggle.</p>
+                            <iframe loading="lazy" src="https://www.kaggle.com/static/images/notebook-banner.png" frameborder="0" scrolling="no" width="230" height="30" title="Kaggle"></iframe>
+                            <a href="https://www.kaggle.com/sripadkarthik" target="_blank" class="repo-link">Visit My Kaggle Profile <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-        <!-- Kaggle Repo Card -->
-        <div class="repo-card kaggle">
-            <div class="repo-icon">
-                <i class="fab fa-kaggle"></i>
-            </div>
-            <div class="repo-details">
-                <h3>Kaggle</h3>
-                <p>Explore my datasets and notebooks on Kaggle.</p>
-                <iframe src="https://www.kaggle.com/static/images/notebook-banner.png" frameborder="0" scrolling="no" width="230" height="30" title="Kaggle"></iframe>
-                <a href="https://www.kaggle.com/sripadkarthik" target="_blank" class="repo-link">Visit My Kaggle Profile <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p><strong>Phone:</strong> +91 9398755799</p>
-                <p><strong>Email:</strong> <a href="mailto:sripadkarthik@gmail.com">sripadkarthik@gmail.com</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/SripadRH/" target="_blank">SripadRH</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/sripad2020" target="_blank">sripad2020</a></p>
-            </div>
-        </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <address class="contact-info">
+                    <p><strong>Phone:</strong> +91 9398755799</p>
+                    <p><strong>Email:</strong> <a href="mailto:sripadkarthik@gmail.com">sripadkarthik@gmail.com</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/SripadRH/" target="_blank">SripadRH</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/sripad2020" target="_blank">sripad2020</a></p>
+                </address>
+            </section>
 
-        <div class="btn-container">
-            <a href="/connect" class="btn">Contact Me</a>
-        </div>
+            <div class="btn-container">
+                <a href="/connect" class="btn">Contact Me</a>
+            </div>
 
-        <div class="division">
-            <h2>Let's Connect!</h2>
-            <p>Feel free to reach out for collaborations, projects, or just to chat about the exciting world of Data Science and AI!</p>
-        </div>
+            <div class="division">
+                <h2>Let's Connect!</h2>
+                <p>Feel free to reach out for collaborations, projects, or just to chat about the exciting world of Data Science and AI!</p>
+            </div>
+        </main>
     </div>
 
     <script>
